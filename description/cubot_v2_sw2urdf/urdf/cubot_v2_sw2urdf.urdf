@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cubot_v2_sw2urdf">
+  <link
+    name="chassis_link">
+    <inertial>
+      <origin
+        xyz="-0.000965136531105137 -0.0436103484806622 0.0147568573788979"
+        rpy="0 0 0" />
+      <mass
+        value="2.22469318861141" />
+      <inertia
+        ixx="0.00517186923483878"
+        ixy="4.04694092279558E-06"
+        ixz="2.85002080178647E-06"
+        iyy="0.00816901465681917"
+        iyz="2.22325509697602E-05"
+        izz="0.0105125411817138" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot_v2_sw2urdf/meshes/chassis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot_v2_sw2urdf/meshes/chassis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00341416691684442 -4.64743523193589E-05 -2.83687443139446E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0458667490486255" />
+      <inertia
+        ixx="3.31656653108071E-05"
+        ixy="-8.88398310340076E-10"
+        ixz="-1.1581763415313E-12"
+        iyy="1.92244241566698E-05"
+        iyz="2.88561876552184E-09"
+        izz="1.9156447935455E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot_v2_sw2urdf/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot_v2_sw2urdf/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.110182841532191 0.0193193127803252 -0.0349999999995608"
+      rpy="0 0 0" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00341416659647087 4.26064723380859E-05 -1.8778365346056E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0458667417414472" />
+      <inertia
+        ixx="3.31656618454357E-05"
+        ixy="7.89123980209917E-10"
+        ixz="-4.07019149776152E-10"
+        iyy="1.92124991905592E-05"
+        iyz="-2.6012328089685E-08"
+        izz="1.91683685719054E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot_v2_sw2urdf/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot_v2_sw2urdf/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.110182841532843 0.0193193127803632 -0.035"
+      rpy="0 0 -3.14159265358979" />
+    <parent
+      link="chassis_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
