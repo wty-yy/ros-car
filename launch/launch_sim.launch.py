@@ -1,6 +1,7 @@
 from pathlib import Path
+import os
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory, get_package_prefix
 
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription
@@ -30,6 +31,11 @@ def generate_launch_description():
     arguments=['-topic', 'robot_description', '-entity', 'my_'+package_name],
     output='screen'
   )
+  pkg_share = os.pathsep + os.path.join(get_package_prefix(package_name), 'share')
+  if 'GAZEBO_MODEL_PATH' in os.environ:
+    os.environ['GAZEBO_MODEL_PATH'] += pkg_share
+  else:
+    os.environ['GAZEBO_MODEL_PATH'] = "/usr/share/gazebo-11/models" + pkg_share
 
   return LaunchDescription([
     rsp, gazebo, spawn_entity
