@@ -15,8 +15,8 @@ teleop_node:
     axis_angular.yaw: 3  # 右摇杆的 X 轴（控制旋转）
 
     # 设置启动小车要一直按下的按钮
-    enable_button: 4  # 启动的按钮 A
-    enable_turbo_button: 5  # 启动涡轮加速的按钮 X
+    enable_button: 4  # 启动的按钮 右上角LB
+    enable_turbo_button: 5  # 启动涡轮加速的按钮 左上角RB
 
     # 设置线性和角速度的缩放比例
     scale_linear: 0.5  # 线速度的比例
