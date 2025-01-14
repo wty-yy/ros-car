@@ -19,7 +19,7 @@ def generate_launch_description():
     name="teleop_node",
     parameters=[joy_params],
     remappings=[
-      ('/cmd_vel', '/diff_cont/cmd_vel_unstamped')
+      ('/cmd_vel', '/diffbot_base_controller/cmd_vel_unstamped')
     ]
   )
 
