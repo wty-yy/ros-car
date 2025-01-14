@@ -1,0 +1,215 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cubot_v2_sw2urdf">
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00101695336969346 -0.0391969072065923 0.0172622634177991"
+        rpy="0 0 0" />
+      <mass
+        value="2.11133844737526" />
+      <inertia
+        ixx="0.00515213576750178"
+        ixy="4.0468841042468E-06"
+        ixz="2.85002049617443E-06"
+        iyy="0.00810381932898893"
+        iyz="2.22311181502574E-05"
+        izz="0.0104376132869909" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.00341416656828462 -4.64748691037242E-05 -2.83529607181254E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.045866746597017" />
+      <inertia
+        ixx="3.31656637604945E-05"
+        ixy="-8.88523405939103E-10"
+        ixz="-7.82299379749764E-13"
+        iyy="1.92244221316748E-05"
+        iyz="2.88444972667256E-09"
+        izz="1.91564482027503E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.110182841531677 0.0193193127809508 -0.035000000001231"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.00341416700392938 -1.85059045610392E-05 -4.27268537469827E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0458667417638158" />
+      <inertia
+        ixx="3.31656620863821E-05"
+        ixy="3.03051608051891E-10"
+        ixz="8.34562073011983E-10"
+        iyy="1.91661908578684E-05"
+        iyz="2.39962211212628E-08"
+        izz="1.92146771677554E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.110182841532844 0.0193193127803634 -0.0349999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="caster_link">
+    <inertial>
+      <origin
+        xyz="9.71113800485313E-10 4.04991856828296E-06 0.0055713197499366"
+        rpy="0 0 0" />
+      <mass
+        value="0.113354735246359" />
+      <inertia
+        ixx="1.97334669142784E-05"
+        ixy="5.68452254228423E-11"
+        ixz="5.89877274371823E-13"
+        iyy="6.5195327166501E-05"
+        iyz="-1.43198049159427E-09"
+        izz="7.49278945986158E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/caster_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cubot/description/cubot_v2/meshes/caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.124726113664049 -0.0374799999999999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+</robot>

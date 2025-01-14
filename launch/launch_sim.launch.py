@@ -36,7 +36,20 @@ def generate_launch_description():
     os.environ['GAZEBO_MODEL_PATH'] += pkg_share
   else:
     os.environ['GAZEBO_MODEL_PATH'] = "/usr/share/gazebo-11/models" + pkg_share
+  
+  diff_driver_spawner = Node(
+    package="controller_manager",
+    executable="spawner",
+    arguments=["diff_cont"],
+  )
+
+  joint_broad_spawner = Node(
+    package="controller_manager",
+    executable="spawner",
+    arguments=["joint_broad"],
+  )
 
   return LaunchDescription([
-    rsp, gazebo, spawn_entity
+    rsp, gazebo, spawn_entity,
+    diff_driver_spawner, joint_broad_spawner
   ])

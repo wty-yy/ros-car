@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+  <xacro:include filename="cubot_v2/urdf/cubot_v2_sw2urdf.urdf"/>
+  <!-- <xacro:include filename="gazebo_control.xacro"/> -->
+  <xacro:include filename="ros2_control.xacro"/>
+
+  <gazebo reference="caster_link">
+    <material>Gazebo/Blue</material>
+    <!-- 脚轮摩擦设为很小, mu1,mu2一起配置 -->
+    <mu1 value="0.001"/>
+    <mu2 value="0.001"/>
+  </gazebo>
+
+</robot>

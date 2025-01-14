@@ -7,15 +7,18 @@ from launch.substitutions import LaunchConfiguration
 from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node
 from pathlib import Path
+import xacro
 
 def generate_launch_description():
 
   # Check if we're told to use sim time
   use_sim_time = LaunchConfiguration('use_sim_time')
 
-  # Process the URDF file
-  with (Path(get_package_share_directory("cubot")) / "description/cubot_v2/urdf/cubot_v2_sw2urdf.urdf").open('r') as file:
-    robot_description = file.read()
+  # Process xacro file
+  path_xacro_file = os.path.join(get_package_share_directory("cubot"), "description/robot.xacro")
+  # path_xacro_file = os.path.join(get_package_share_directory("cubot"), "description/demo/robot.urdf.xacro")
+  robot_xacro = xacro.process_file(path_xacro_file)
+  robot_description = robot_xacro.toxml()  # 转为URDF的xml格式
   
   # Create a robot_state_publisher node
   params = {'robot_description': robot_description, 'use_sim_time': use_sim_time}

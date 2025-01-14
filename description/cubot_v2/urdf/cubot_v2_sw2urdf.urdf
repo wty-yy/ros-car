@@ -16,16 +16,16 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="-0.00101695336969346 -0.0391969072065923 0.0172622634177991"
+        xyz="0.0391969072065923 -0.00101695336969354 0.0172622634177991"
         rpy="0 0 0" />
       <mass
         value="2.11133844737526" />
       <inertia
-        ixx="0.00515213576750178"
-        ixy="4.0468841042468E-06"
-        ixz="2.85002049617443E-06"
-        iyy="0.00810381932898893"
-        iyz="2.22311181502574E-05"
+        ixx="0.00810381932898893"
+        ixy="-4.04688410425005E-06"
+        ixz="-2.22311181502572E-05"
+        iyy="0.00515213576750178"
+        iyz="2.85002049617443E-06"
         izz="0.0104376132869909" />
     </inertial>
     <visual>
@@ -56,17 +56,17 @@
     name="left_wheel_link">
     <inertial>
       <origin
-        xyz="-0.00341416656828462 -4.64748691037242E-05 -2.83529607181254E-06"
+        xyz="4.64739506124134E-05 2.83446131096876E-06 -0.00341416634712033"
         rpy="0 0 0" />
       <mass
-        value="0.045866746597017" />
+        value="0.0458667465351408" />
       <inertia
-        ixx="3.31656637604945E-05"
-        ixy="-8.88523405939103E-10"
-        ixz="-7.82299379749764E-13"
-        iyy="1.92244221316748E-05"
-        iyz="2.88444972667256E-09"
-        izz="1.91564482027503E-05" />
+        ixx="1.92244224670465E-05"
+        ixy="2.88637992016539E-09"
+        ixz="8.88310050215939E-10"
+        iyy="1.91564476074593E-05"
+        iyz="4.2649891782141E-13"
+        izz="3.31656636860426E-05" />
     </inertial>
     <visual>
       <origin
@@ -96,30 +96,30 @@
     name="left_wheel_joint"
     type="continuous">
     <origin
-      xyz="0.110182841531677 0.0193193127809508 -0.035000000001231"
-      rpy="0 0 0" />
+      xyz="-0.0193193127809507 0.110182841531677 -0.035000000001231"
+      rpy="-1.5707963267949 0 0" />
     <parent
       link="base_link" />
     <child
       link="left_wheel_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 0 1" />
   </joint>
   <link
     name="right_wheel_link">
     <inertial>
       <origin
-        xyz="0.00341416700392938 -1.85059045610392E-05 -4.27268537469827E-05"
+        xyz="1.85059381818953E-05 -4.27269320609214E-05 -0.00341416702807762"
         rpy="0 0 0" />
       <mass
-        value="0.0458667417638158" />
+        value="0.0458667419245876" />
       <inertia
-        ixx="3.31656620863821E-05"
-        ixy="3.03051608051891E-10"
-        ixz="8.34562073011983E-10"
-        iyy="1.91661908578684E-05"
-        iyz="2.39962211212628E-08"
-        izz="1.92146771677554E-05" />
+        ixx="1.91661909505543E-05"
+        ixy="-2.39961843599765E-08"
+        ixz="3.03062328334653E-10"
+        iyy="1.92146771906765E-05"
+        iyz="-8.34587388546564E-10"
+        izz="3.31656621875727E-05" />
     </inertial>
     <visual>
       <origin
@@ -149,29 +149,29 @@
     name="right_wheel_joint"
     type="continuous">
     <origin
-      xyz="-0.110182841532844 0.0193193127803634 -0.0349999999999998"
-      rpy="0 0 0" />
+      xyz="-0.0193193127803636 -0.110182841532843 -0.0349999999999998"
+      rpy="1.5707963267949 0 0" />
     <parent
       link="base_link" />
     <child
       link="right_wheel_link" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 0 -1" />
   </joint>
   <link
     name="caster_link">
     <inertial>
       <origin
-        xyz="9.71113800485313E-10 4.04991856828296E-06 0.0055713197499366"
+        xyz="-4.04991856828296E-06 9.71113772729737E-10 0.0055713197499366"
         rpy="0 0 0" />
       <mass
         value="0.113354735246359" />
       <inertia
-        ixx="1.97334669142784E-05"
-        ixy="5.68452254228423E-11"
-        ixz="5.89877274371823E-13"
-        iyy="6.5195327166501E-05"
-        iyz="-1.43198049159427E-09"
+        ixx="6.51953271665009E-05"
+        ixy="-5.68452254770524E-11"
+        ixz="1.43198049159682E-09"
+        iyy="1.97334669142784E-05"
+        iyz="5.89877275324735E-13"
         izz="7.49278945986158E-05" />
     </inertial>
     <visual>
@@ -202,7 +202,7 @@
     name="caster_joint"
     type="fixed">
     <origin
-      xyz="0 -0.124726113664049 -0.0374799999999999"
+      xyz="0.124726113664049 0 -0.0374799999999999"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -211,36 +211,4 @@
     <axis
       xyz="0 0 0" />
   </joint>
-
-  <gazebo>
-    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
-    <!-- 参考文档 https://docs.ros.org/en/rolling/p/gazebo_plugins/generated/classgazebo__plugins_1_1GazeboRosDiffDrive.html -->
-      <!-- Wheel Information 两轮子joint设置 -->
-      <left_joint>left_wheel_joint</left_joint>
-      <right_joint>right_wheel_joint</right_joint>
-      <!-- wheel separation 两轮中点(frame)间距, 根据robot_main定义中0.175*2得到 -->
-      <wheel_separation>0.35</wheel_separation>
-      <!-- wheel diameter 两轮直径0.5*2得到 -->
-      <wheel_diameter>0.1</wheel_diameter>
-
-      <!-- Limits -->
-      <max_wheel_torque>200</max_wheel_torque>
-      <max_wheel_acceleration>10.0</max_wheel_acceleration>
-
-      <!-- Output odom是gazebo对模型的虚拟基础点, base_link会相对其进行tf -->
-      <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>base_footprint</robot_base_frame>
-
-      <publish_odom>true</publish_odom>
-      <publish_odom_tf>true</publish_odom_tf>
-      <publish_wheel_tf>true</publish_wheel_tf>
-    </plugin>
-  </gazebo>
-
-  <gazebo reference="caster_link">
-    <material>Gazebo/Blue</material>
-    <!-- 脚轮摩擦设为很小, mu1,mu2一起配置 -->
-    <mu1 value="0.001"/>
-    <mu2 value="0.001"/>
-  </gazebo>
 </robot>
