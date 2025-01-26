@@ -5,7 +5,7 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-  joy_params = str(Path(get_package_share_directory('cubot'))/"config/joystick.yaml")
+  joy_params = str(Path(get_package_share_directory('ros_car'))/"config/joystick.yaml")
 
   node_robot_state_publisher = Node(
     package='joy',

@@ -15,8 +15,8 @@ def generate_launch_description():
   use_sim_time = LaunchConfiguration('use_sim_time')
 
   # Process xacro file
-  path_xacro_file = os.path.join(get_package_share_directory("cubot"), "description/robot.xacro")
-  # path_xacro_file = os.path.join(get_package_share_directory("cubot"), "description/demo/robot.urdf.xacro")
+  path_xacro_file = os.path.join(get_package_share_directory("ros_car"), "description/robot.xacro")
+  # path_xacro_file = os.path.join(get_package_share_directory("ros_car"), "description/demo/robot.urdf.xacro")
   robot_xacro = xacro.process_file(path_xacro_file)
   robot_description = robot_xacro.toxml()  # 转为URDF的xml格式
   

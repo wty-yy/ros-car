@@ -1,4 +1,4 @@
-# CuBot
+# ROS Car
 
 This is a cube small car, designed by wty-yy.
 

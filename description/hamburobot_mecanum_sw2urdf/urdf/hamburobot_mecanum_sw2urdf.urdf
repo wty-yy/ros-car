@@ -1,0 +1,373 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hamburobot_mecanum_sw2urdf">
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+      <origin xyz="0 0 0.058" rpy="0 0 0" />
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0015220719484009 -0.0142451055165608 0.0679693338870609"
+        rpy="0 0 0" />
+      <mass
+        value="2.40766174070448" />
+      <inertia
+        ixx="0.00536487523246144"
+        ixy="-3.60061646830653E-06"
+        ixz="1.6875677745376E-06"
+        iyy="0.00624385615969261"
+        iyz="2.197495557817E-06"
+        izz="0.0112971311451681" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_link">
+    <inertial>
+      <origin
+        xyz="1.12734363511002E-10 -0.0160115068591593 -5.60751545891636E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0481559444406492" />
+      <inertia
+        ixx="2.03933177207268E-05"
+        ixy="6.00220672338477E-14"
+        ixz="5.13477136358059E-13"
+        iyy="3.30581870380513E-05"
+        iyz="-7.96884985898082E-14"
+        izz="2.03933175821204E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/front_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/front_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.0727512705401299 0.146 -0.0199999999993777"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="front_right_link">
+    <inertial>
+      <origin
+        xyz="1.58815453704664E-08 0.0159924467984791 2.09160352232507E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0481556698836567" />
+      <inertia
+        ixx="2.03931355576674E-05"
+        ixy="4.25100991424662E-13"
+        ixz="-1.64672632339935E-12"
+        iyy="3.30579291477114E-05"
+        iyz="6.76960027072217E-12"
+        izz="2.03931617135917E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/front_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/front_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.0732487294356269 -0.146 -0.0199999999898234"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rear_left_link">
+    <inertial>
+      <origin
+        xyz="2.23995683112932E-11 -0.0160115068591593 -5.7153262678078E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.0481559444406491" />
+      <inertia
+        ixx="2.03933178780091E-05"
+        ixy="4.66279845960775E-14"
+        ixz="4.65962141580749E-13"
+        iyy="3.30581870380512E-05"
+        iyz="-8.81971386897979E-14"
+        izz="2.0393317424838E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/rear_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/rear_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0732487294597767 0.146 -0.0199999999994514"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rear_right_link">
+    <inertial>
+      <origin
+        xyz="4.67195694492384E-08 0.0159924414439735 -1.05456903314038E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0481557058503501" />
+      <inertia
+        ixx="2.03931655208453E-05"
+        ixy="9.92746403633751E-12"
+        ixz="3.44040052517717E-11"
+        iyy="3.30579701522931E-05"
+        iyz="-2.35855300348972E-12"
+        izz="2.03931756337084E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/rear_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/rear_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0727512705497122 -0.146 -0.0199999999752682"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="0.000199578588783535 6.35679438556179E-06 -0.0380654061376524"
+        rpy="0 0 0" />
+      <mass
+        value="0.141887348399494" />
+      <inertia
+        ixx="4.17977417102379E-05"
+        ixy="-5.52583550307152E-09"
+        ixz="-3.05328896177203E-07"
+        iyy="4.50773283450384E-05"
+        iyz="4.39691434334916E-10"
+        izz="6.8799827248141E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0479999999999996 0 0.2100971"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camer_link">
+    <inertial>
+      <origin
+        xyz="-0.0125484866989141 -0.00229321310091865 -6.0569148806866E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0447520698165274" />
+      <inertia
+        ixx="2.72774831609136E-05"
+        ixy="2.44350452128318E-07"
+        ixz="-1.17473508294145E-09"
+        iyy="3.94471452699667E-06"
+        iyz="-2.80418538661178E-09"
+        izz="2.73620467887244E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/camer_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hamburobot_mecanum_sw2urdf/meshes/camer_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camer_joint"
+    type="fixed">
+    <origin
+      xyz="0.10678300691308 0.00254273397883267 0.1726"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camer_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

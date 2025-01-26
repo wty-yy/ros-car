@@ -16,7 +16,7 @@ def generate_launch_description():
 
   rsp = IncludeLaunchDescription(
     PythonLaunchDescriptionSource([os.path.join(
-      get_package_share_directory('cubot'), 'launch', 'rsp.launch.py'
+      get_package_share_directory('ros_car'), 'launch', 'rsp.launch.py'
     )]), launch_arguments={'use_sim_time': use_sim_time}.items()
   )
 

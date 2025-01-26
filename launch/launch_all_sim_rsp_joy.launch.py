@@ -12,7 +12,7 @@ def generate_launch_description():
   Force sim time to be enable.
   """
 
-  package_name = "cubot"
+  package_name = "ros_car"
   path_current_pkg = Path(get_package_share_directory(package_name))
   sim_launch = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(
