@@ -10,18 +10,21 @@ teleop_node:
   ros__parameters:
     # 设置控制前进后退的轴，通常是右摇杆的 Y 轴
     axis_linear.x: 4  # 右摇杆的 Y 轴（前后方向）
+    axis_linear.y: 3  # 右摇杆的 Y 轴（左右方向）
     
     # 设置控制角速度的轴，通常是右摇杆的 X 轴
-    axis_angular.yaw: 3  # 右摇杆的 X 轴（控制旋转）
+    axis_angular.yaw: 0  # 右摇杆的 X 轴（控制旋转）
 
     # 设置启动小车要一直按下的按钮
     enable_button: 4  # 启动的按钮 右上角LB
     enable_turbo_button: 5  # 启动涡轮加速的按钮 左上角RB
 
     # 设置线性和角速度的缩放比例
-    scale_linear: 0.5  # 线速度的比例
-    scale_angular: 0.5  # 角速度的比例
-    scale_linear_turbo: 1.0  # 涡轮控制下线速度的比例
-    scale_angular_turbo: 1.0  # 涡轮控制下角速度的比例
+    scale_linear.x: 0.5  # 线速度的比例
+    scale_linear.y: 0.5  # 线速度的比例
+    scale_angular.yaw: 1.0  # 角速度的比例
+    scale_linear_turbo.x: 1.0  # 涡轮控制下线速度的比例
+    scale_linear_turbo.y: 1.0  # 涡轮控制下线速度的比例
+    scale_angular_turbo.yaw: 1.0  # 涡轮控制下角速度的比例
 
 

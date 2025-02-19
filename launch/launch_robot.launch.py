@@ -47,7 +47,7 @@ def generate_launch_description():
   diff_drive_spawner = Node(
     package="controller_manager",
     executable="spawner",
-    arguments=["diff_cont"],
+    arguments=["mecanum_controller"],
   )
 
   joint_broad_spawner = Node(
@@ -64,7 +64,7 @@ def generate_launch_description():
   )
 
   return LaunchDescription([
-    rsp, rviz,
+    rsp, # rviz,
     controller_manager,
     delayed_spawners
   ])
