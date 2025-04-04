@@ -1,0 +1,28 @@
+# joy_node配置
+joy_node:
+  ros__parameters:
+    device_id: 0
+    deadzone: 0.05
+    autoreeat_rate: 20.0
+
+# 修改teleop_twist配置参数到手柄对应按键上, 控制小车, 手柄为xbox series
+teleop_node:
+  ros__parameters:
+    axis_linear.x: 3  # 右摇杆的 Y 轴（前后方向）
+    axis_linear.y: 2  # 右摇杆的 X 轴（左右方向）
+    
+    axis_angular.yaw: 0  # 左摇杆的 X 轴（控制旋转）
+
+    # 设置启动小车要一直按下的按钮
+    enable_button: 7  # 启动的按钮 右上角LB
+    enable_turbo_button: 9  # 启动涡轮加速的按钮 左上角RB
+
+    # 设置线性和角速度的缩放比例
+    scale_linear.x: 0.5  # 线速度的比例
+    scale_linear.y: 0.5  # 线速度的比例
+    scale_angular.yaw: 1.0  # 角速度的比例
+    scale_linear_turbo.x: 1.0  # 涡轮控制下线速度的比例
+    scale_linear_turbo.y: 1.0  # 涡轮控制下线速度的比例
+    scale_angular_turbo.yaw: 1.0  # 涡轮控制下角速度的比例
+
+

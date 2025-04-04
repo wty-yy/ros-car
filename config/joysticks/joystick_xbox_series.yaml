@@ -8,12 +8,10 @@ joy_node:
 # 修改teleop_twist配置参数到手柄对应按键上, 控制小车, 手柄为xbox series
 teleop_node:
   ros__parameters:
-    # 设置控制前进后退的轴，通常是右摇杆的 Y 轴
     axis_linear.x: 4  # 右摇杆的 Y 轴（前后方向）
-    axis_linear.y: 3  # 右摇杆的 Y 轴（左右方向）
+    axis_linear.y: 3  # 右摇杆的 X 轴（左右方向）
     
-    # 设置控制角速度的轴，通常是右摇杆的 X 轴
-    axis_angular.yaw: 0  # 右摇杆的 X 轴（控制旋转）
+    axis_angular.yaw: 0  # 左摇杆的 X 轴（控制旋转）
 
     # 设置启动小车要一直按下的按钮
     enable_button: 4  # 启动的按钮 右上角LB
