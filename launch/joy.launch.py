@@ -35,7 +35,7 @@ def generate_launch_description():
     DeclareLaunchArgument(
       'joystick',
       default_value='xbox_series',
-      description='Available joysticks: [xbox_series, xbox360]'),
+      description='Available joysticks: [xbox_series, xbox360] (p.s. bt2pro\'s config is xbox_series)'),
     OpaqueFunction(function=launch_setup)
   ])
 

@@ -20,9 +20,9 @@ teleop_node:
     # 设置线性和角速度的缩放比例
     scale_linear.x: 0.5  # 线速度的比例
     scale_linear.y: 0.5  # 线速度的比例
-    scale_angular.yaw: 1.0  # 角速度的比例
-    scale_linear_turbo.x: 1.0  # 涡轮控制下线速度的比例
-    scale_linear_turbo.y: 1.0  # 涡轮控制下线速度的比例
-    scale_angular_turbo.yaw: 1.0  # 涡轮控制下角速度的比例
+    scale_angular.yaw: 2.0  # 角速度的比例
+    scale_linear_turbo.x: 3.0  # 涡轮控制下线速度的比例
+    scale_linear_turbo.y: 3.0  # 涡轮控制下线速度的比例
+    scale_angular_turbo.yaw: 6.0  # 涡轮控制下角速度的比例
 
 
